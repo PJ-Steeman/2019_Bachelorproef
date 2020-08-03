@@ -1,0 +1,635 @@
+
+stuurEnOntvang.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         0000006a  00800200  000003f2  00000486  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         000003f2  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .bss          00000082  0080026a  0080026a  000004f0  2**0
+                  ALLOC
+  3 .comment      00000030  00000000  00000000  000004f0  2**0
+                  CONTENTS, READONLY
+  4 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  00000520  2**2
+                  CONTENTS, READONLY
+  5 .debug_aranges 00000060  00000000  00000000  00000560  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_info   000012fa  00000000  00000000  000005c0  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_abbrev 00000d2a  00000000  00000000  000018ba  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_line   000005cc  00000000  00000000  000025e4  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_frame  000000dc  00000000  00000000  00002bb0  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_str    000006a7  00000000  00000000  00002c8c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_loc    00000282  00000000  00000000  00003333  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_ranges 00000050  00000000  00000000  000035b5  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	71 c0       	rjmp	.+226    	; 0xe4 <__ctors_end>
+   2:	00 00       	nop
+   4:	8e c0       	rjmp	.+284    	; 0x122 <__bad_interrupt>
+   6:	00 00       	nop
+   8:	8c c0       	rjmp	.+280    	; 0x122 <__bad_interrupt>
+   a:	00 00       	nop
+   c:	8a c0       	rjmp	.+276    	; 0x122 <__bad_interrupt>
+   e:	00 00       	nop
+  10:	88 c0       	rjmp	.+272    	; 0x122 <__bad_interrupt>
+  12:	00 00       	nop
+  14:	86 c0       	rjmp	.+268    	; 0x122 <__bad_interrupt>
+  16:	00 00       	nop
+  18:	84 c0       	rjmp	.+264    	; 0x122 <__bad_interrupt>
+  1a:	00 00       	nop
+  1c:	82 c0       	rjmp	.+260    	; 0x122 <__bad_interrupt>
+  1e:	00 00       	nop
+  20:	80 c0       	rjmp	.+256    	; 0x122 <__bad_interrupt>
+  22:	00 00       	nop
+  24:	7e c0       	rjmp	.+252    	; 0x122 <__bad_interrupt>
+  26:	00 00       	nop
+  28:	7c c0       	rjmp	.+248    	; 0x122 <__bad_interrupt>
+  2a:	00 00       	nop
+  2c:	7a c0       	rjmp	.+244    	; 0x122 <__bad_interrupt>
+  2e:	00 00       	nop
+  30:	78 c0       	rjmp	.+240    	; 0x122 <__bad_interrupt>
+  32:	00 00       	nop
+  34:	76 c0       	rjmp	.+236    	; 0x122 <__bad_interrupt>
+  36:	00 00       	nop
+  38:	74 c0       	rjmp	.+232    	; 0x122 <__bad_interrupt>
+  3a:	00 00       	nop
+  3c:	72 c0       	rjmp	.+228    	; 0x122 <__bad_interrupt>
+  3e:	00 00       	nop
+  40:	70 c0       	rjmp	.+224    	; 0x122 <__bad_interrupt>
+  42:	00 00       	nop
+  44:	6e c0       	rjmp	.+220    	; 0x122 <__bad_interrupt>
+  46:	00 00       	nop
+  48:	6c c0       	rjmp	.+216    	; 0x122 <__bad_interrupt>
+  4a:	00 00       	nop
+  4c:	6a c0       	rjmp	.+212    	; 0x122 <__bad_interrupt>
+  4e:	00 00       	nop
+  50:	68 c0       	rjmp	.+208    	; 0x122 <__bad_interrupt>
+  52:	00 00       	nop
+  54:	66 c0       	rjmp	.+204    	; 0x122 <__bad_interrupt>
+  56:	00 00       	nop
+  58:	64 c0       	rjmp	.+200    	; 0x122 <__bad_interrupt>
+  5a:	00 00       	nop
+  5c:	62 c0       	rjmp	.+196    	; 0x122 <__bad_interrupt>
+  5e:	00 00       	nop
+  60:	60 c0       	rjmp	.+192    	; 0x122 <__bad_interrupt>
+  62:	00 00       	nop
+  64:	95 c1       	rjmp	.+810    	; 0x390 <__vector_25>
+  66:	00 00       	nop
+  68:	5c c0       	rjmp	.+184    	; 0x122 <__bad_interrupt>
+  6a:	00 00       	nop
+  6c:	5a c0       	rjmp	.+180    	; 0x122 <__bad_interrupt>
+  6e:	00 00       	nop
+  70:	58 c0       	rjmp	.+176    	; 0x122 <__bad_interrupt>
+  72:	00 00       	nop
+  74:	56 c0       	rjmp	.+172    	; 0x122 <__bad_interrupt>
+  76:	00 00       	nop
+  78:	54 c0       	rjmp	.+168    	; 0x122 <__bad_interrupt>
+  7a:	00 00       	nop
+  7c:	52 c0       	rjmp	.+164    	; 0x122 <__bad_interrupt>
+  7e:	00 00       	nop
+  80:	50 c0       	rjmp	.+160    	; 0x122 <__bad_interrupt>
+  82:	00 00       	nop
+  84:	4e c0       	rjmp	.+156    	; 0x122 <__bad_interrupt>
+  86:	00 00       	nop
+  88:	4c c0       	rjmp	.+152    	; 0x122 <__bad_interrupt>
+  8a:	00 00       	nop
+  8c:	4a c0       	rjmp	.+148    	; 0x122 <__bad_interrupt>
+  8e:	00 00       	nop
+  90:	48 c0       	rjmp	.+144    	; 0x122 <__bad_interrupt>
+  92:	00 00       	nop
+  94:	46 c0       	rjmp	.+140    	; 0x122 <__bad_interrupt>
+  96:	00 00       	nop
+  98:	44 c0       	rjmp	.+136    	; 0x122 <__bad_interrupt>
+  9a:	00 00       	nop
+  9c:	42 c0       	rjmp	.+132    	; 0x122 <__bad_interrupt>
+  9e:	00 00       	nop
+  a0:	40 c0       	rjmp	.+128    	; 0x122 <__bad_interrupt>
+  a2:	00 00       	nop
+  a4:	3e c0       	rjmp	.+124    	; 0x122 <__bad_interrupt>
+  a6:	00 00       	nop
+  a8:	3c c0       	rjmp	.+120    	; 0x122 <__bad_interrupt>
+  aa:	00 00       	nop
+  ac:	3a c0       	rjmp	.+116    	; 0x122 <__bad_interrupt>
+  ae:	00 00       	nop
+  b0:	38 c0       	rjmp	.+112    	; 0x122 <__bad_interrupt>
+  b2:	00 00       	nop
+  b4:	36 c0       	rjmp	.+108    	; 0x122 <__bad_interrupt>
+  b6:	00 00       	nop
+  b8:	34 c0       	rjmp	.+104    	; 0x122 <__bad_interrupt>
+  ba:	00 00       	nop
+  bc:	32 c0       	rjmp	.+100    	; 0x122 <__bad_interrupt>
+  be:	00 00       	nop
+  c0:	30 c0       	rjmp	.+96     	; 0x122 <__bad_interrupt>
+  c2:	00 00       	nop
+  c4:	2e c0       	rjmp	.+92     	; 0x122 <__bad_interrupt>
+  c6:	00 00       	nop
+  c8:	2c c0       	rjmp	.+88     	; 0x122 <__bad_interrupt>
+  ca:	00 00       	nop
+  cc:	2a c0       	rjmp	.+84     	; 0x122 <__bad_interrupt>
+  ce:	00 00       	nop
+  d0:	28 c0       	rjmp	.+80     	; 0x122 <__bad_interrupt>
+  d2:	00 00       	nop
+  d4:	26 c0       	rjmp	.+76     	; 0x122 <__bad_interrupt>
+  d6:	00 00       	nop
+  d8:	24 c0       	rjmp	.+72     	; 0x122 <__bad_interrupt>
+  da:	00 00       	nop
+  dc:	22 c0       	rjmp	.+68     	; 0x122 <__bad_interrupt>
+  de:	00 00       	nop
+  e0:	20 c0       	rjmp	.+64     	; 0x122 <__bad_interrupt>
+	...
+
+000000e4 <__ctors_end>:
+  e4:	11 24       	eor	r1, r1
+  e6:	1f be       	out	0x3f, r1	; 63
+  e8:	cf ef       	ldi	r28, 0xFF	; 255
+  ea:	d1 e2       	ldi	r29, 0x21	; 33
+  ec:	de bf       	out	0x3e, r29	; 62
+  ee:	cd bf       	out	0x3d, r28	; 61
+  f0:	00 e0       	ldi	r16, 0x00	; 0
+  f2:	0c bf       	out	0x3c, r16	; 60
+
+000000f4 <__do_copy_data>:
+  f4:	12 e0       	ldi	r17, 0x02	; 2
+  f6:	a0 e0       	ldi	r26, 0x00	; 0
+  f8:	b2 e0       	ldi	r27, 0x02	; 2
+  fa:	e2 ef       	ldi	r30, 0xF2	; 242
+  fc:	f3 e0       	ldi	r31, 0x03	; 3
+  fe:	00 e0       	ldi	r16, 0x00	; 0
+ 100:	0b bf       	out	0x3b, r16	; 59
+ 102:	02 c0       	rjmp	.+4      	; 0x108 <__do_copy_data+0x14>
+ 104:	07 90       	elpm	r0, Z+
+ 106:	0d 92       	st	X+, r0
+ 108:	aa 36       	cpi	r26, 0x6A	; 106
+ 10a:	b1 07       	cpc	r27, r17
+ 10c:	d9 f7       	brne	.-10     	; 0x104 <__do_copy_data+0x10>
+
+0000010e <__do_clear_bss>:
+ 10e:	22 e0       	ldi	r18, 0x02	; 2
+ 110:	aa e6       	ldi	r26, 0x6A	; 106
+ 112:	b2 e0       	ldi	r27, 0x02	; 2
+ 114:	01 c0       	rjmp	.+2      	; 0x118 <.do_clear_bss_start>
+
+00000116 <.do_clear_bss_loop>:
+ 116:	1d 92       	st	X+, r1
+
+00000118 <.do_clear_bss_start>:
+ 118:	ac 3e       	cpi	r26, 0xEC	; 236
+ 11a:	b2 07       	cpc	r27, r18
+ 11c:	e1 f7       	brne	.-8      	; 0x116 <.do_clear_bss_loop>
+ 11e:	14 d1       	rcall	.+552    	; 0x348 <main>
+ 120:	66 c1       	rjmp	.+716    	; 0x3ee <_exit>
+
+00000122 <__bad_interrupt>:
+ 122:	6e cf       	rjmp	.-292    	; 0x0 <__vectors>
+
+00000124 <stuurAT>:
+	while ( !( UCSR0A & (1<<UDRE0)) )
+	;
+	/* Put data into buffer, sends the data */
+	UDR0 = rxBuffer[rxWritePos];
+	
+	rxWritePos++;
+ 124:	cf 93       	push	r28
+ 126:	df 93       	push	r29
+ 128:	ec 01       	movw	r28, r24
+ 12a:	80 e0       	ldi	r24, 0x00	; 0
+ 12c:	e0 ec       	ldi	r30, 0xC0	; 192
+ 12e:	f0 e0       	ldi	r31, 0x00	; 0
+ 130:	46 ec       	ldi	r20, 0xC6	; 198
+ 132:	50 e0       	ldi	r21, 0x00	; 0
+ 134:	0a c0       	rjmp	.+20     	; 0x14a <stuurAT+0x26>
+ 136:	90 81       	ld	r25, Z
+ 138:	95 ff       	sbrs	r25, 5
+ 13a:	fd cf       	rjmp	.-6      	; 0x136 <stuurAT+0x12>
+ 13c:	de 01       	movw	r26, r28
+ 13e:	a2 0f       	add	r26, r18
+ 140:	b3 1f       	adc	r27, r19
+ 142:	9c 91       	ld	r25, X
+ 144:	da 01       	movw	r26, r20
+ 146:	9c 93       	st	X, r25
+ 148:	8f 5f       	subi	r24, 0xFF	; 255
+ 14a:	28 2f       	mov	r18, r24
+ 14c:	30 e0       	ldi	r19, 0x00	; 0
+ 14e:	de 01       	movw	r26, r28
+ 150:	0d 90       	ld	r0, X+
+ 152:	00 20       	and	r0, r0
+ 154:	e9 f7       	brne	.-6      	; 0x150 <stuurAT+0x2c>
+ 156:	11 97       	sbiw	r26, 0x01	; 1
+ 158:	ac 1b       	sub	r26, r28
+ 15a:	bd 0b       	sbc	r27, r29
+ 15c:	2a 17       	cp	r18, r26
+ 15e:	3b 07       	cpc	r19, r27
+ 160:	50 f3       	brcs	.-44     	; 0x136 <stuurAT+0x12>
+ 162:	df 91       	pop	r29
+ 164:	cf 91       	pop	r28
+ 166:	08 95       	ret
+
+00000168 <getChar>:
+ 168:	90 91 6b 02 	lds	r25, 0x026B	; 0x80026b <rxReadPos>
+ 16c:	80 91 6a 02 	lds	r24, 0x026A	; 0x80026a <__data_end>
+ 170:	98 17       	cp	r25, r24
+ 172:	69 f0       	breq	.+26     	; 0x18e <getChar+0x26>
+ 174:	e9 2f       	mov	r30, r25
+ 176:	f0 e0       	ldi	r31, 0x00	; 0
+ 178:	e4 59       	subi	r30, 0x94	; 148
+ 17a:	fd 4f       	sbci	r31, 0xFD	; 253
+ 17c:	80 81       	ld	r24, Z
+ 17e:	9f 5f       	subi	r25, 0xFF	; 255
+ 180:	1a f0       	brmi	.+6      	; 0x188 <getChar+0x20>
+ 182:	90 93 6b 02 	sts	0x026B, r25	; 0x80026b <rxReadPos>
+ 186:	08 95       	ret
+ 188:	10 92 6b 02 	sts	0x026B, r1	; 0x80026b <rxReadPos>
+ 18c:	08 95       	ret
+ 18e:	80 e0       	ldi	r24, 0x00	; 0
+ 190:	08 95       	ret
+
+00000192 <checkSMSCode>:
+ 192:	ec e6       	ldi	r30, 0x6C	; 108
+ 194:	f2 e0       	ldi	r31, 0x02	; 2
+ 196:	01 90       	ld	r0, Z+
+ 198:	00 20       	and	r0, r0
+ 19a:	e9 f7       	brne	.-6      	; 0x196 <checkSMSCode+0x4>
+ 19c:	31 97       	sbiw	r30, 0x01	; 1
+ 19e:	af 01       	movw	r20, r30
+ 1a0:	4c 56       	subi	r20, 0x6C	; 108
+ 1a2:	52 40       	sbci	r21, 0x02	; 2
+ 1a4:	ec e6       	ldi	r30, 0x6C	; 108
+ 1a6:	f2 e0       	ldi	r31, 0x02	; 2
+ 1a8:	9a 01       	movw	r18, r20
+ 1aa:	24 59       	subi	r18, 0x94	; 148
+ 1ac:	3d 4f       	sbci	r19, 0xFD	; 253
+ 1ae:	18 c0       	rjmp	.+48     	; 0x1e0 <checkSMSCode+0x4e>
+ 1b0:	81 91       	ld	r24, Z+
+ 1b2:	81 33       	cpi	r24, 0x31	; 49
+ 1b4:	a9 f4       	brne	.+42     	; 0x1e0 <checkSMSCode+0x4e>
+ 1b6:	80 81       	ld	r24, Z
+ 1b8:	82 33       	cpi	r24, 0x32	; 50
+ 1ba:	91 f4       	brne	.+36     	; 0x1e0 <checkSMSCode+0x4e>
+ 1bc:	81 81       	ldd	r24, Z+1	; 0x01
+ 1be:	83 33       	cpi	r24, 0x33	; 51
+ 1c0:	79 f4       	brne	.+30     	; 0x1e0 <checkSMSCode+0x4e>
+ 1c2:	82 81       	ldd	r24, Z+2	; 0x02
+ 1c4:	84 33       	cpi	r24, 0x34	; 52
+ 1c6:	61 f4       	brne	.+24     	; 0x1e0 <checkSMSCode+0x4e>
+ 1c8:	60 e3       	ldi	r22, 0x30	; 48
+ 1ca:	70 e0       	ldi	r23, 0x00	; 0
+ 1cc:	8c e6       	ldi	r24, 0x6C	; 108
+ 1ce:	92 e0       	ldi	r25, 0x02	; 2
+ 1d0:	07 d1       	rcall	.+526    	; 0x3e0 <memset>
+ 1d2:	10 92 6a 02 	sts	0x026A, r1	; 0x80026a <__data_end>
+ 1d6:	10 92 6b 02 	sts	0x026B, r1	; 0x80026b <rxReadPos>
+ 1da:	81 e0       	ldi	r24, 0x01	; 1
+ 1dc:	90 e0       	ldi	r25, 0x00	; 0
+ 1de:	08 95       	ret
+ 1e0:	e2 17       	cp	r30, r18
+ 1e2:	f3 07       	cpc	r31, r19
+ 1e4:	29 f7       	brne	.-54     	; 0x1b0 <checkSMSCode+0x1e>
+ 1e6:	80 e0       	ldi	r24, 0x00	; 0
+ 1e8:	90 e0       	ldi	r25, 0x00	; 0
+ 1ea:	08 95       	ret
+
+000001ec <stuurAlarmSMS>:
+ 1ec:	cf 93       	push	r28
+ 1ee:	df 93       	push	r29
+ 1f0:	ec 01       	movw	r28, r24
+ 1f2:	ec e6       	ldi	r30, 0x6C	; 108
+ 1f4:	f2 e0       	ldi	r31, 0x02	; 2
+ 1f6:	01 90       	ld	r0, Z+
+ 1f8:	00 20       	and	r0, r0
+ 1fa:	e9 f7       	brne	.-6      	; 0x1f6 <stuurAlarmSMS+0xa>
+ 1fc:	31 97       	sbiw	r30, 0x01	; 1
+ 1fe:	af 01       	movw	r20, r30
+ 200:	4c 56       	subi	r20, 0x6C	; 108
+ 202:	52 40       	sbci	r21, 0x02	; 2
+ 204:	60 e3       	ldi	r22, 0x30	; 48
+ 206:	70 e0       	ldi	r23, 0x00	; 0
+ 208:	8c e6       	ldi	r24, 0x6C	; 108
+ 20a:	92 e0       	ldi	r25, 0x02	; 2
+ 20c:	e9 d0       	rcall	.+466    	; 0x3e0 <memset>
+ 20e:	10 92 6a 02 	sts	0x026A, r1	; 0x80026a <__data_end>
+ 212:	10 92 6b 02 	sts	0x026B, r1	; 0x80026b <rxReadPos>
+ 216:	86 e6       	ldi	r24, 0x66	; 102
+ 218:	92 e0       	ldi	r25, 0x02	; 2
+ 21a:	84 df       	rcall	.-248    	; 0x124 <stuurAT>
+ 21c:	a5 df       	rcall	.-182    	; 0x168 <getChar>
+ 21e:	8b 34       	cpi	r24, 0x4B	; 75
+ 220:	e9 f7       	brne	.-6      	; 0x21c <stuurAlarmSMS+0x30>
+ 222:	ec e6       	ldi	r30, 0x6C	; 108
+ 224:	f2 e0       	ldi	r31, 0x02	; 2
+ 226:	01 90       	ld	r0, Z+
+ 228:	00 20       	and	r0, r0
+ 22a:	e9 f7       	brne	.-6      	; 0x226 <stuurAlarmSMS+0x3a>
+ 22c:	31 97       	sbiw	r30, 0x01	; 1
+ 22e:	af 01       	movw	r20, r30
+ 230:	4c 56       	subi	r20, 0x6C	; 108
+ 232:	52 40       	sbci	r21, 0x02	; 2
+ 234:	60 e3       	ldi	r22, 0x30	; 48
+ 236:	70 e0       	ldi	r23, 0x00	; 0
+ 238:	8c e6       	ldi	r24, 0x6C	; 108
+ 23a:	92 e0       	ldi	r25, 0x02	; 2
+ 23c:	d1 d0       	rcall	.+418    	; 0x3e0 <memset>
+ 23e:	10 92 6a 02 	sts	0x026A, r1	; 0x80026a <__data_end>
+ 242:	10 92 6b 02 	sts	0x026B, r1	; 0x80026b <rxReadPos>
+ 246:	8b e5       	ldi	r24, 0x5B	; 91
+ 248:	92 e0       	ldi	r25, 0x02	; 2
+ 24a:	6c df       	rcall	.-296    	; 0x124 <stuurAT>
+ 24c:	8d df       	rcall	.-230    	; 0x168 <getChar>
+ 24e:	86 34       	cpi	r24, 0x46	; 70
+ 250:	e9 f7       	brne	.-6      	; 0x24c <stuurAlarmSMS+0x60>
+ 252:	ec e6       	ldi	r30, 0x6C	; 108
+ 254:	f2 e0       	ldi	r31, 0x02	; 2
+ 256:	01 90       	ld	r0, Z+
+ 258:	00 20       	and	r0, r0
+ 25a:	e9 f7       	brne	.-6      	; 0x256 <stuurAlarmSMS+0x6a>
+ 25c:	31 97       	sbiw	r30, 0x01	; 1
+ 25e:	af 01       	movw	r20, r30
+ 260:	4c 56       	subi	r20, 0x6C	; 108
+ 262:	52 40       	sbci	r21, 0x02	; 2
+ 264:	60 e3       	ldi	r22, 0x30	; 48
+ 266:	70 e0       	ldi	r23, 0x00	; 0
+ 268:	8c e6       	ldi	r24, 0x6C	; 108
+ 26a:	92 e0       	ldi	r25, 0x02	; 2
+ 26c:	b9 d0       	rcall	.+370    	; 0x3e0 <memset>
+ 26e:	10 92 6a 02 	sts	0x026A, r1	; 0x80026a <__data_end>
+ 272:	10 92 6b 02 	sts	0x026B, r1	; 0x80026b <rxReadPos>
+ 276:	83 e4       	ldi	r24, 0x43	; 67
+ 278:	92 e0       	ldi	r25, 0x02	; 2
+ 27a:	54 df       	rcall	.-344    	; 0x124 <stuurAT>
+ 27c:	75 df       	rcall	.-278    	; 0x168 <getChar>
+ 27e:	8e 33       	cpi	r24, 0x3E	; 62
+ 280:	e9 f7       	brne	.-6      	; 0x27c <stuurAlarmSMS+0x90>
+ 282:	ec e6       	ldi	r30, 0x6C	; 108
+ 284:	f2 e0       	ldi	r31, 0x02	; 2
+ 286:	01 90       	ld	r0, Z+
+ 288:	00 20       	and	r0, r0
+ 28a:	e9 f7       	brne	.-6      	; 0x286 <stuurAlarmSMS+0x9a>
+ 28c:	31 97       	sbiw	r30, 0x01	; 1
+ 28e:	af 01       	movw	r20, r30
+ 290:	4c 56       	subi	r20, 0x6C	; 108
+ 292:	52 40       	sbci	r21, 0x02	; 2
+ 294:	60 e3       	ldi	r22, 0x30	; 48
+ 296:	70 e0       	ldi	r23, 0x00	; 0
+ 298:	8c e6       	ldi	r24, 0x6C	; 108
+ 29a:	92 e0       	ldi	r25, 0x02	; 2
+ 29c:	a1 d0       	rcall	.+322    	; 0x3e0 <memset>
+ 29e:	10 92 6a 02 	sts	0x026A, r1	; 0x80026a <__data_end>
+ 2a2:	10 92 6b 02 	sts	0x026B, r1	; 0x80026b <rxReadPos>
+ 2a6:	ce 01       	movw	r24, r28
+ 2a8:	3d df       	rcall	.-390    	; 0x124 <stuurAT>
+ 2aa:	84 e3       	ldi	r24, 0x34	; 52
+ 2ac:	92 e0       	ldi	r25, 0x02	; 2
+ 2ae:	3a df       	rcall	.-396    	; 0x124 <stuurAT>
+ 2b0:	df 91       	pop	r29
+ 2b2:	cf 91       	pop	r28
+ 2b4:	08 95       	ret
+
+000002b6 <initSMSModule>:
+}
+
+void initSMSModule(void)
+{
+	memset(rxBuffer, '0', strlen(rxBuffer)); rxWritePos = 0; rxReadPos = 0;
+ 2b6:	ec e6       	ldi	r30, 0x6C	; 108
+ 2b8:	f2 e0       	ldi	r31, 0x02	; 2
+ 2ba:	01 90       	ld	r0, Z+
+ 2bc:	00 20       	and	r0, r0
+ 2be:	e9 f7       	brne	.-6      	; 0x2ba <initSMSModule+0x4>
+ 2c0:	31 97       	sbiw	r30, 0x01	; 1
+ 2c2:	af 01       	movw	r20, r30
+ 2c4:	4c 56       	subi	r20, 0x6C	; 108
+ 2c6:	52 40       	sbci	r21, 0x02	; 2
+ 2c8:	60 e3       	ldi	r22, 0x30	; 48
+ 2ca:	70 e0       	ldi	r23, 0x00	; 0
+ 2cc:	8c e6       	ldi	r24, 0x6C	; 108
+ 2ce:	92 e0       	ldi	r25, 0x02	; 2
+ 2d0:	87 d0       	rcall	.+270    	; 0x3e0 <memset>
+ 2d2:	10 92 6a 02 	sts	0x026A, r1	; 0x80026a <__data_end>
+ 2d6:	10 92 6b 02 	sts	0x026B, r1	; 0x80026b <rxReadPos>
+	stuurAT(atCommand_1); //AT\r
+ 2da:	86 e6       	ldi	r24, 0x66	; 102
+ 2dc:	92 e0       	ldi	r25, 0x02	; 2
+	while(1)
+	{
+		char c = getChar();
+ 2de:	22 df       	rcall	.-444    	; 0x124 <stuurAT>
+ 2e0:	43 df       	rcall	.-378    	; 0x168 <getChar>
+		if (c == 'K')
+ 2e2:	8b 34       	cpi	r24, 0x4B	; 75
+ 2e4:	e9 f7       	brne	.-6      	; 0x2e0 <initSMSModule+0x2a>
+			break;
+	}
+	
+		memset(rxBuffer, '0', strlen(rxBuffer)); rxWritePos = 0; rxReadPos = 0;
+ 2e6:	ec e6       	ldi	r30, 0x6C	; 108
+ 2e8:	f2 e0       	ldi	r31, 0x02	; 2
+ 2ea:	01 90       	ld	r0, Z+
+ 2ec:	00 20       	and	r0, r0
+ 2ee:	e9 f7       	brne	.-6      	; 0x2ea <initSMSModule+0x34>
+ 2f0:	31 97       	sbiw	r30, 0x01	; 1
+ 2f2:	af 01       	movw	r20, r30
+ 2f4:	4c 56       	subi	r20, 0x6C	; 108
+ 2f6:	52 40       	sbci	r21, 0x02	; 2
+ 2f8:	60 e3       	ldi	r22, 0x30	; 48
+ 2fa:	70 e0       	ldi	r23, 0x00	; 0
+ 2fc:	8c e6       	ldi	r24, 0x6C	; 108
+ 2fe:	92 e0       	ldi	r25, 0x02	; 2
+ 300:	6f d0       	rcall	.+222    	; 0x3e0 <memset>
+ 302:	10 92 6a 02 	sts	0x026A, r1	; 0x80026a <__data_end>
+ 306:	10 92 6b 02 	sts	0x026B, r1	; 0x80026b <rxReadPos>
+		stuurAT(atCommand_2);  //AT+CMGF=1\r
+ 30a:	8b e5       	ldi	r24, 0x5B	; 91
+ 30c:	92 e0       	ldi	r25, 0x02	; 2
+ 30e:	0a df       	rcall	.-492    	; 0x124 <stuurAT>
+		while(1)		//enkel hier problemen
+		{
+			char c = getChar();
+ 310:	2b df       	rcall	.-426    	; 0x168 <getChar>
+ 312:	86 34       	cpi	r24, 0x46	; 70
+			if (c == 'F')				
+ 314:	e9 f7       	brne	.-6      	; 0x310 <initSMSModule+0x5a>
+ 316:	ec e6       	ldi	r30, 0x6C	; 108
+				break;
+		}
+	
+		memset(rxBuffer, '0', strlen(rxBuffer)); rxWritePos = 0; rxReadPos = 0;
+ 318:	f2 e0       	ldi	r31, 0x02	; 2
+ 31a:	01 90       	ld	r0, Z+
+ 31c:	00 20       	and	r0, r0
+ 31e:	e9 f7       	brne	.-6      	; 0x31a <initSMSModule+0x64>
+ 320:	31 97       	sbiw	r30, 0x01	; 1
+ 322:	af 01       	movw	r20, r30
+ 324:	4c 56       	subi	r20, 0x6C	; 108
+ 326:	52 40       	sbci	r21, 0x02	; 2
+ 328:	60 e3       	ldi	r22, 0x30	; 48
+ 32a:	70 e0       	ldi	r23, 0x00	; 0
+ 32c:	8c e6       	ldi	r24, 0x6C	; 108
+ 32e:	92 e0       	ldi	r25, 0x02	; 2
+ 330:	57 d0       	rcall	.+174    	; 0x3e0 <memset>
+ 332:	10 92 6a 02 	sts	0x026A, r1	; 0x80026a <__data_end>
+ 336:	10 92 6b 02 	sts	0x026B, r1	; 0x80026b <rxReadPos>
+		stuurAT(atCommand_6); //text ontvang mode zetten
+ 33a:	81 e2       	ldi	r24, 0x21	; 33
+ 33c:	92 e0       	ldi	r25, 0x02	; 2
+ 33e:	f2 de       	rcall	.-540    	; 0x124 <stuurAT>
+		while(1)		//enkel hier problemen
+		{
+			char c = getChar();
+ 340:	13 df       	rcall	.-474    	; 0x168 <getChar>
+ 342:	89 34       	cpi	r24, 0x49	; 73
+			if (c == 'I')		//testen op I, want CNMI commando echo
+ 344:	e9 f7       	brne	.-6      	; 0x340 <initSMSModule+0x8a>
+ 346:	08 95       	ret
+
+00000348 <main>:
+				break;
+		}
+}
+ 348:	10 92 c5 00 	sts	0x00C5, r1	; 0x8000c5 <__TEXT_REGION_LENGTH__+0x7000c5>
+//NB: de '\0'in de rxBuffer kan een probleem zijn bij de strlen controle want die checkt
+// op '\0' dacht ik
+int main(void)
+{
+	UBRR0H = 0;
+	UBRR0L = BRC;
+ 34c:	87 e6       	ldi	r24, 0x67	; 103
+ 34e:	80 93 c4 00 	sts	0x00C4, r24	; 0x8000c4 <__TEXT_REGION_LENGTH__+0x7000c4>
+
+	UCSR0B = (1 << RXCIE0) | (1 << RXEN0)  | (1 << TXEN0);
+ 352:	88 e9       	ldi	r24, 0x98	; 152
+ 354:	80 93 c1 00 	sts	0x00C1, r24	; 0x8000c1 <__TEXT_REGION_LENGTH__+0x7000c1>
+	UCSR0C = (1 << UCSZ01) | (1 << UCSZ00);
+ 358:	86 e0       	ldi	r24, 0x06	; 6
+ 35a:	80 93 c2 00 	sts	0x00C2, r24	; 0x8000c2 <__TEXT_REGION_LENGTH__+0x7000c2>
+	DDRB = (1 << PORTB7);
+ 35e:	80 e8       	ldi	r24, 0x80	; 128
+ 360:	84 b9       	out	0x04, r24	; 4
+
+	sei();
+ 362:	78 94       	sei
+	
+	sbi(PORTB, PORTB7);
+ 364:	2f 9a       	sbi	0x05, 7	; 5
+	initSMSModule();
+ 366:	a7 df       	rcall	.-178    	; 0x2b6 <initSMSModule>
+	stuurAlarmSMS(atCommand_4);
+ 368:	87 e3       	ldi	r24, 0x37	; 55
+ 36a:	92 e0       	ldi	r25, 0x02	; 2
+ 36c:	3f df       	rcall	.-386    	; 0x1ec <stuurAlarmSMS>
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 36e:	2f ef       	ldi	r18, 0xFF	; 255
+ 370:	81 ee       	ldi	r24, 0xE1	; 225
+ 372:	94 e0       	ldi	r25, 0x04	; 4
+ 374:	21 50       	subi	r18, 0x01	; 1
+ 376:	80 40       	sbci	r24, 0x00	; 0
+ 378:	90 40       	sbci	r25, 0x00	; 0
+ 37a:	e1 f7       	brne	.-8      	; 0x374 <main+0x2c>
+ 37c:	00 c0       	rjmp	.+0      	; 0x37e <main+0x36>
+	
+    while (1)
+    {
+		_delay_ms(100);
+		if (checkSMSCode())
+ 37e:	00 00       	nop
+ 380:	08 df       	rcall	.-496    	; 0x192 <checkSMSCode>
+ 382:	89 2b       	or	r24, r25
+ 384:	a1 f3       	breq	.-24     	; 0x36e <main+0x26>
+		 {
+			cbi(PORTB, PORTB7);
+			stuurAlarmSMS(atCommand_7);
+ 386:	2f 98       	cbi	0x05, 7	; 5
+ 388:	80 e0       	ldi	r24, 0x00	; 0
+ 38a:	92 e0       	ldi	r25, 0x02	; 2
+ 38c:	2f df       	rcall	.-418    	; 0x1ec <stuurAlarmSMS>
+ 38e:	ef cf       	rjmp	.-34     	; 0x36e <main+0x26>
+
+00000390 <__vector_25>:
+}
+
+
+
+ISR(USART0_RX_vect) // wordt elke keer opgeroepen indien er iets ontvangen wordt in buffer 0
+{
+ 390:	1f 92       	push	r1
+ 392:	0f 92       	push	r0
+ 394:	0f b6       	in	r0, 0x3f	; 63
+ 396:	0f 92       	push	r0
+ 398:	11 24       	eor	r1, r1
+ 39a:	0b b6       	in	r0, 0x3b	; 59
+ 39c:	0f 92       	push	r0
+ 39e:	8f 93       	push	r24
+ 3a0:	9f 93       	push	r25
+ 3a2:	ef 93       	push	r30
+ 3a4:	ff 93       	push	r31
+	cli();
+ 3a6:	f8 94       	cli
+    rxBuffer[rxWritePos] = UDR0;
+ 3a8:	80 91 6a 02 	lds	r24, 0x026A	; 0x80026a <__data_end>
+ 3ac:	90 91 c6 00 	lds	r25, 0x00C6	; 0x8000c6 <__TEXT_REGION_LENGTH__+0x7000c6>
+ 3b0:	e8 2f       	mov	r30, r24
+ 3b2:	f0 e0       	ldi	r31, 0x00	; 0
+ 3b4:	e4 59       	subi	r30, 0x94	; 148
+ 3b6:	fd 4f       	sbci	r31, 0xFD	; 253
+ 3b8:	90 83       	st	Z, r25
+    rxWritePos++;
+ 3ba:	8f 5f       	subi	r24, 0xFF	; 255
+
+    if(rxWritePos >= RX_BUFFER_SIZE)
+ 3bc:	1a f0       	brmi	.+6      	; 0x3c4 <__vector_25+0x34>
+
+ISR(USART0_RX_vect) // wordt elke keer opgeroepen indien er iets ontvangen wordt in buffer 0
+{
+	cli();
+    rxBuffer[rxWritePos] = UDR0;
+    rxWritePos++;
+ 3be:	80 93 6a 02 	sts	0x026A, r24	; 0x80026a <__data_end>
+ 3c2:	02 c0       	rjmp	.+4      	; 0x3c8 <__vector_25+0x38>
+
+    if(rxWritePos >= RX_BUFFER_SIZE)
+    {
+        rxWritePos = 0;
+ 3c4:	10 92 6a 02 	sts	0x026A, r1	; 0x80026a <__data_end>
+    }
+	sei();
+ 3c8:	78 94       	sei
+}
+ 3ca:	ff 91       	pop	r31
+ 3cc:	ef 91       	pop	r30
+ 3ce:	9f 91       	pop	r25
+ 3d0:	8f 91       	pop	r24
+ 3d2:	0f 90       	pop	r0
+ 3d4:	0b be       	out	0x3b, r0	; 59
+ 3d6:	0f 90       	pop	r0
+ 3d8:	0f be       	out	0x3f, r0	; 63
+ 3da:	0f 90       	pop	r0
+ 3dc:	1f 90       	pop	r1
+ 3de:	18 95       	reti
+
+000003e0 <memset>:
+ 3e0:	dc 01       	movw	r26, r24
+ 3e2:	01 c0       	rjmp	.+2      	; 0x3e6 <memset+0x6>
+ 3e4:	6d 93       	st	X+, r22
+ 3e6:	41 50       	subi	r20, 0x01	; 1
+ 3e8:	50 40       	sbci	r21, 0x00	; 0
+ 3ea:	e0 f7       	brcc	.-8      	; 0x3e4 <memset+0x4>
+ 3ec:	08 95       	ret
+
+000003ee <_exit>:
+ 3ee:	f8 94       	cli
+
+000003f0 <__stop_program>:
+ 3f0:	ff cf       	rjmp	.-2      	; 0x3f0 <__stop_program>
